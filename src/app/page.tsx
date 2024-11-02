@@ -1,5 +1,6 @@
 import { SignedIn, SignedOut } from "@clerk/nextjs";
 import Image from "next/image";
+import Link from "next/link";
 import { db } from "~/server/db";
 import { getMyImages } from "~/server/queries";
 
@@ -15,10 +16,19 @@ async function Images() {
   }
 
   return (
-    <div className="grid grid-cols-1 justify-center sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4">
+    <div className="grid grid-cols-1 justify-center gap-4 p-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
       {images.map((image) => (
-        <div key={image.id} className="bg-gray-700 p-4 rounded-lg">
-          <Image style={{objectFit:"contain"}} width={480} height={480} src={image.url} alt={image.name} className="w-full h-64 object-cover" />
+        <div key={image.id} className="rounded-lg bg-gray-700 p-4">
+          <Link href={`/photos/${image.id}`}>
+            <Image
+              style={{ objectFit: "contain" }}
+              width={480}
+              height={480}
+              src={image.url}
+              alt={image.name}
+              className="h-64 w-full object-cover"
+            />
+          </Link>
           <div className="text-center">{image.name}</div>
         </div>
       ))}

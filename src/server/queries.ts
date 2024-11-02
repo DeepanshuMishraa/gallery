@@ -18,3 +18,18 @@ export async function getMyImages() {
 
   return images;
 }
+
+
+export async function getImage(id:string){
+    const image = await db.image.findFirst({
+        where:{
+            id:id as string
+        }
+    })
+
+    if(!image){
+        throw new Error("Image Not Found")
+    }
+
+    return image;
+}
