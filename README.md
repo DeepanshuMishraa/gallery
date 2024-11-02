@@ -8,7 +8,7 @@
 - [x] Setup db(Neon Postgres)
 - [x] Attach DB to UI
 - [x] Add authentication
-- [ ] Add image upload
+- [x] Add image upload
 - [ ] "taint" (server only)
 - [ ] use Next Image component
 - [ ] Error management with sentry
