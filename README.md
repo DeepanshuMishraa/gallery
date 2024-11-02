@@ -9,9 +9,9 @@
 - [x] Attach DB to UI
 - [x] Add authentication
 - [x] Add image upload
-- [ ] "taint" (server only)
-- [ ] use Next Image component
-- [ ] Error management with sentry
+- [x] "taint" (server only)
+- [x] use Next Image component
+- [x] Error management with sentry
 - [ ] Routing/image Page(parallel routes)
 - [ ] Delete button(w server action)
 - [ ] Analytics(Posthog)
