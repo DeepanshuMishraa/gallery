@@ -25,7 +25,7 @@ export default function RootLayout({
   modal: React.ReactNode;
 }>) {
   return (
-    <ClerkProvider>
+    <ClerkProvider dynamic>
       <CSPostHogProvider>
         <html lang="en" className={`${GeistSans.variable}`}>
           <NextSSRPlugin
